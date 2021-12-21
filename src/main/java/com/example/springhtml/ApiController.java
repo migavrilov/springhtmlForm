@@ -27,7 +27,8 @@ public class ApiController {
     @GetMapping("/info")
     @ResponseBody
     public String allInfo() {
-        String html = "<table>";
+        String html = "<style> table, td, th { border: 1px solid black; }</style><table><th>fio</th><th>email</th>" +
+                "<th>phone</th><th>q1</th><th>q2</th><th>q3</th>";
         for (Form f : info) {
             String line = "";
             line += "<tr>";
